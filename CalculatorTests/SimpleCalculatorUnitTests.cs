@@ -25,24 +25,6 @@ namespace Calculator.Tests
         {
             var result = Calculator.Add(start, amount);
 
-            /*            _accountsRepo.Setup(r => r.Save(It.IsAny<Account>())).Returns<Account>(
-                a =>
-                {
-                    a.Id = newAccountId;
-                    return a;
-                });
-                        //many lines later
-                        _newAccountNotificationService.Verify(s => s.Notify(newAccountId, userId));*/
-
-            /*            string input = "";
-                        MockLogger.Setup(p => p.Log(result.ToString()))
-                            .Callback<string>((s) => { input = s; });*/
-
-/*            MockLogger.Setup(p => p.Log(It.IsAny<string>())).Callback<string>(s => s = result.ToString());
-            MockLogger.Verify(p => p.Log(result.ToString()), Times.Once);*/
-
-            //Assert.That(input, Is.EqualTo(expectedResult.ToString()));
-
             Assert.That(result, Is.EqualTo(expectedResult));
         }
 
