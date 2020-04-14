@@ -8,7 +8,7 @@ namespace Calculator.Logger
     {
         public void Log(string message)
         {
-            Console.WriteLine(message);
+            Console.WriteLine($"Result: {message}");
         }
     }
 }

@@ -29,15 +29,22 @@ namespace ConsoleApp
 
         public async Task Run()
         {
-            Console.WriteLine("Enter an operation to perform in the form of [number] [operator] [number]:");
-            string input = Console.ReadLine();
-            while (!input.Equals("q"))
+            try
             {
-                var result = await ProcessString(input);
-                Console.WriteLine(result);
-
                 Console.WriteLine("Enter an operation to perform in the form of [number] [operator] [number]:");
-                input = Console.ReadLine();
+                string input = Console.ReadLine();
+                while (!input.Equals("q"))
+                {
+                    var result = await ProcessString(input);
+                    Console.WriteLine($"Result: {result}");
+
+                    Console.WriteLine("Enter an operation to perform in the form of [number] [operator] [number]:");
+                    input = Console.ReadLine();
+                }
+            }
+            catch(Exception e)
+            {
+                Console.WriteLine(e.Message);
             }
         }
 
@@ -89,7 +96,6 @@ namespace ConsoleApp
                     Message = e.Message,
                     Success = false
                 });
-                Console.WriteLine(e.Message);
                 throw e;
             }
         }
