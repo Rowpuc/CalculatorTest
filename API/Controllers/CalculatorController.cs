@@ -27,7 +27,7 @@ namespace API
             return new HttpResult
             {
                 Data = result,
-                Message = "",
+                Message = "The addition calculation has been completed successfully.",
                 Success = true
             };
         }
@@ -40,7 +40,7 @@ namespace API
             return new HttpResult
             {
                 Data = result,
-                Message = "",
+                Message = "The subtraction calculation has been completed successfully.",
                 Success = true
             };
         }
@@ -53,7 +53,7 @@ namespace API
             return new HttpResult
             {
                 Data = result,
-                Message = "",
+                Message = "The division calculation has been completed successfully.",
                 Success = true
             };
         }
@@ -66,7 +66,7 @@ namespace API
             return new HttpResult
             {
                 Data = result,
-                Message = "",
+                Message = "The multiplication calculation has been completed successfully.",
                 Success = true
             };
         }
